@@ -1,5 +1,3 @@
-/utils/getGoogleUrl.ts
-
 export const getGoogleUrl = (from: string) => {
   const rootUrl = `https://accounts.google.com/o/oauth2/v2/auth`;
 
