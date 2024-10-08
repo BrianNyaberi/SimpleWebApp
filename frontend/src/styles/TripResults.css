@@ -1,0 +1,57 @@
+.trip-results {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .trip-results h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .trip-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .trip-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .trip-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .trip-info p {
+    margin: 5px 0;
+  }
+  
+  .trip-time, .trip-cost {
+    font-weight: bold;
+  }
+  
+  .trip-status {
+    text-transform: capitalize;
+    color: #28a745;
+  }

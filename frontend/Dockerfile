@@ -2,5 +2,6 @@ FROM node:14
 WORKDIR /src
 COPY . .
 RUN npm install
-CMD ["node", "app.js"]
-EXPOSE 5000
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
