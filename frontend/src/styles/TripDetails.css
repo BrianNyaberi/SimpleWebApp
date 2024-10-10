@@ -1,0 +1,114 @@
+.trip-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-arrow {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.trip-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* First Section */
+.trip-overview {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-time {
+  margin-right: auto;
+}
+
+.cost {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Second Section */
+.trip-locations {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.dot.green {
+  background-color: #4CAF50;
+}
+
+.dot.red {
+  background-color: #f44336;
+}
+
+.location-text {
+  flex-grow: 1;
+}
+
+.time {
+  margin-left: auto;
+}
+
+/* Third Section */
+.trip-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.car-picture, .driver-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Fourth Section */
+.map-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px;
+} 

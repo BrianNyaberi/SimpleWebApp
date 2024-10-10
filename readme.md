@@ -9,13 +9,10 @@ This is a simple web application that allows users to search for trips, view sea
 
 ## Running the Application
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd SimpleWebApp
+1. cd SimpleWebApp
    ```
 
-2. Build and run the Docker containers:
+2. Build and run the Docker containers, by running the command:
    ```
    docker-compose up --build
    ```
@@ -40,7 +37,7 @@ If you want to run the application in development mode:
    ```
    cd backend
    npm install
-   npm run dev
+   npm run start
    ```
 
 2. For the frontend:
@@ -99,5 +96,3 @@ SimpleWebApp/
 - The backend uses Express.js and serves trip data and search functionality.
 - The frontend is built with React and includes three main components: TripSearch, TripResults, and TripDetails.
 - Docker is used to containerize both the backend and frontend, making it easy to run the entire application with a single command.
-
-For any issues or questions, please contact the development team.

@@ -1,0 +1,127 @@
+.trip-results {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-arrow {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.trip-results h2 {
+  margin: 0;
+  color: #333;
+}
+
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trip-card {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.trip-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trip-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trip-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trip-time {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.trip-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trip-pickup, .trip-dropoff {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+.red {
+  background-color: #f44336;
+}
+
+.trip-distance {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.trip-secondary-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.trip-cost {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.driver-rating {
+  margin: 0;
+  color: #ffc107;
+}
+
+.trip-status {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: capitalize;
+}
+
+.trip-status.completed {
+  color: #4CAF50;
+}
+
+.trip-status.canceled {
+  color: #f44336;
+}
