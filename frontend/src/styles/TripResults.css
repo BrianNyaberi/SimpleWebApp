@@ -4,25 +4,20 @@
   padding: 20px;
 }
 
-.trip-results h2 {
-  text-align: center;
-  color: #333;
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.back-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.back-arrow {
   cursor: pointer;
-  font-size: 16px;
+  margin-right: 10px;
 }
 
-.back-button:hover {
-  background-color: #0056b3;
+.trip-results h2 {
+  margin: 0;
+  color: #333;
 }
 
 .trip-list {
@@ -32,51 +27,101 @@
 }
 
 .trip-card {
-  background-color: #f8f9fa;
+  background-color: white;
   border: 1px solid #dee2e6;
-  border-radius: 5px;
-  padding: 15px;
+  border-radius: 8px;
+  padding: 20px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .trip-card:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.trip-info p {
-  margin: 5px 0;
+.trip-info {
+  display: flex;
+  justify-content: space-between;
 }
 
-.trip-time, .trip-cost {
-  font-weight: bold;
+.trip-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trip-time {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.trip-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trip-pickup, .trip-dropoff {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .green {
-  color: green;
+  background-color: #4CAF50;
 }
 
 .red {
-  color: red;
+  background-color: #f44336;
+}
+
+.trip-distance {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.trip-secondary-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.trip-cost {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.driver-rating {
+  margin: 0;
+  color: #ffc107;
 }
 
 .trip-status {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   text-transform: capitalize;
 }
 
 .trip-status.completed {
-  color: green;
+  color: #4CAF50;
 }
 
 .trip-status.canceled {
-  color: red;
-}
-
-.status-icon {
-  margin-left: 5px;
-}
-
-.driver-rating {
-  color: #ffc107;
-  font-size: 1.2em;
+  color: #f44336;
 }

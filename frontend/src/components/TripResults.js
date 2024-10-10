@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import './../styles/TripResults.css';
 
 function TripResults() {
   const location = useLocation();
   const navigate = useNavigate();
-
   const trips = location.state?.trips || [];
   
   const handleTripClick = (trip) => {
@@ -18,24 +18,38 @@ function TripResults() {
 
   return (
     <div className="trip-results">
-      <h2>Search Results ({trips.length})</h2>
-      <button className="back-button" onClick={() => navigate(-1)}>Back to Search</button>
+      <div className="header">
+        <ArrowLeft className="back-arrow" onClick={() => navigate(-1)} />
+        <h2>Trips ({trips.length})</h2>
+      </div>
       <div className="trip-list">
         {trips.length > 0 ? (
           trips.map((trip) => (
             <div key={trip.id} className="trip-card" onClick={() => handleTripClick(trip)}>
               <div className="trip-info">
-                <p className="trip-time">Start Time: {new Date(trip.pickup_date).toLocaleString()}</p>
-                <p className="trip-cost">Cost: {trip.cost} {trip.cost_unit}</p>
-                <p className="trip-pickup">Pickup: <span className="green">{trip.pickup_location}</span></p>
-                <p className="trip-dropoff">Dropoff: <span className="red">{trip.dropoff_location}</span></p>
-                <p className="trip-distance">Distance: {trip.distance} {trip.distance_unit}</p>
-                <p className={`trip-status ${trip.status.toLowerCase()}`}>
-                  Status: {trip.status}
-                  {trip.status === 'COMPLETED' && <span className="status-icon">✓</span>}
-                  {trip.status === 'CANCELED' && <span className="status-icon">✗</span>}
-                </p>
-                <p className="driver-rating">{renderStars(trip.driver_rating)}</p>
+                <div className="trip-main-info">
+                  <p className="trip-time">{new Date(trip.pickup_date).toLocaleString()}</p>
+                  <div className="trip-locations">
+                    <p className="trip-pickup">
+                      <span className="dot green"></span>
+                      {trip.pickup_location}
+                    </p>
+                    <p className="trip-dropoff">
+                      <span className="dot red"></span>
+                      {trip.dropoff_location}
+                    </p>
+                  </div>
+                  <p className="trip-distance">{trip.distance} {trip.distance_unit}</p>
+                </div>
+                <div className="trip-secondary-info">
+                  <p className="trip-cost">{trip.cost} {trip.cost_unit}</p>
+                  <p className="driver-rating">{renderStars(trip.driver_rating)}</p>
+                  <p className={`trip-status ${trip.status.toLowerCase()}`}>
+                    {trip.status}
+                    {trip.status === 'COMPLETED' && <span className="status-icon">✓</span>}
+                    {trip.status === 'CANCELED' && <span className="status-icon">✗</span>}
+                  </p>
+                </div>
               </div>
             </div>
           ))
